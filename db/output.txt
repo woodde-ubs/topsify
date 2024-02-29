@@ -1,0 +1,12 @@
+|              name               | duration_ms |
+|---------------------------------|-------------|
+| I''M THAT GIRL                  | 208014.0    |
+| COZY                            | 210372.0    |
+| ALIEN SUPERSTAR                 | 215459.0    |
+| CUFF IT                         | 225388.0    |
+| ENERGY (feat. Beam)             | 116727.0    |
+| BREAK MY SOUL                   | 278281.0    |
+| CHURCH GIRL                     | 224472.0    |
+| PLASTIC OFF THE SOFA            | 254319.0    |
+| VIRGO''S GROOVE                 | 368758.0    |
+| MOVE (feat. Grace Jones & Tems) | 203383.0    |
