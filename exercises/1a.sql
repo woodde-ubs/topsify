@@ -1,0 +1,1 @@
+-- Retrieve a list of all artists in the database:

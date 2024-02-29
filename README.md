@@ -10,37 +10,119 @@ We need you working on the database straight away.
 The database is in SQL. Before you tackle the backlog, you should take some time
 to get up to speed.
 
-## Deep dive
+## Getting started
 
-### Day 1
+1. First up, clone this repo and run `npm install` to get all the dependencies.
 
-| Reading                         | Exercises             |
-| ------------------------------- | --------------------- |
-| [Select queries]()              | `1a.sql` and `1b.sql` |
-| [Limit]() and [Offset]()        | `2a.sql` and `2b.sql` |
-| [Grouping]() and [Aggregates]() | `3a.sql` and `3b.sql` |
+1. Next, lets set up the database by running `npm run restore`. At any time, if
+   your database gets messed up, you can run this command. It will delete all
+   the tables and fill it again with the initial test data.
+
+1. Have a look at `queries/example.sql` to see how to query the database.
+
+## Database
+
+Here's a glance at how the database is set up.
+
+```mermaid
+erDiagram
+    users {
+        INTEGER id PK "Primary Key"
+        TEXT username "Unique"
+        TEXT firstName
+        TEXT lastName
+        TEXT email "Unique"
+        TEXT avatar
+        TEXT password "Hashed"
+    }
+
+    artists {
+        TEXT id PK "Primary Key"
+        TEXT name
+        TEXT url
+    }
+
+    albums {
+        TEXT id PK "Primary Key"
+        TEXT name
+        TEXT artist_id FK "Foreign Key to artists"
+        TEXT release_date
+        TEXT image_url
+    }
+
+    tracks {
+        TEXT id PK "Primary Key"
+        TEXT album_id FK "Foreign Key to albums"
+        TEXT name
+        BOOLEAN explicit
+        TEXT preview_url
+        INTEGER disc_number
+        INTEGER track_number
+        REAL duration_ms
+    }
+
+    features {
+        TEXT track_id PK "Primary Key, FK to tracks"
+        REAL danceability
+        REAL energy
+        INTEGER key
+        REAL loudness
+        INTEGER mode
+        REAL speechiness
+        REAL acousticness
+        REAL instrumentalness
+        REAL liveness
+        REAL valence
+        REAL tempo
+        INTEGER time_signature
+    }
+
+    artists ||--o{ albums : "has"
+    albums ||--o{ tracks : "contains"
+    tracks ||--|| features : "described by"
+```
+
+## Day 1
+
+### Deep dive
+
+| Reading                                                                                                                                                                   | Exercises             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| [Select queries](https://tech-docs.corndel.com/sql/select-queries.html) and [Selecting with conditions](https://tech-docs.corndel.com/sql/selecting-with-conditions.html) | `1a.sql` and `1b.sql` |
+| [Ordering results](https://tech-docs.corndel.com/sql/ordering-results.html)                                                                                               | `2a.sql` and `2b.sql` |
+| [Paginating results](https://tech-docs.corndel.com/sql/limit-offset.html)                                                                                                 | `3a.sql` and `3b.sql` |
+
+### Workshop
 
 With that done, head to CONTRIBUTING.md to see how you can help generating some
 reports.
 
 ## Day 2
 
-| Reading     | Exercises             |
-| ----------- | --------------------- |
-| [Reading]() | `4a.sql` and `4b.sql` |
-| [Reading]() | `5a.sql` and `5b.sql` |
-| [Reading]() | `6a.sql` and `6b.sql` |
+### Deep dive
+
+| Reading                                                                         | Exercises             |
+| ------------------------------------------------------------------------------- | --------------------- |
+| [Inner joins](https://tech-docs.corndel.com/sql/inner-joins.html)               | `4a.sql` and `4b.sql` |
+| [Aggregate queries](https://tech-docs.corndel.com/sql/aggregate-queries.html)   | `5a.sql` and `5b.sql` |
+| [Grouped aggregates](https://tech-docs.corndel.com/sql/grouped-aggregates.html) | `6a.sql` and `6b.sql` |
+
+### Workshop
 
 Now you know about join, we can take our reports to the next level. Head to
 CONTRIBUTING.md to help!
 
-### Day 3
+## Day 3
 
-| Reading     | Exercises             |
-| ----------- | --------------------- |
-| [Reading]() | `7a.sql` and `7b.sql` |
-| [Reading]() | `8a.sql` and `8b.sql` |
-| [Reading]() | `9a.sql` and `9b.sql` |
+### Deep dive
+
+| Reading                                                                                                                                                                                            | Exercises             |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| [Create](https://tech-docs.corndel.com/sql/inserting-rows.html), [update](https://tech-docs.corndel.com/sql/updating-rows.html) and [delete](https://tech-docs.corndel.com/sql/deleting-rows.html) | `7a.sql` and `7b.sql` |
+| [Creating tables](https://tech-docs.corndel.com/sql/creating-tables.html)                                                                                                                          | `8a.sql` and `8b.sql` |
+| [One-to-many](https://tech-docs.corndel.com/sql/one-to-many.html) and [many-to-many](https://tech-docs.corndel.com/sql/many-to-many.html) relationships                                            | `9a.sql` and `9b.sql` |
+
+### Workshop
 
 We really need the playlists feature out as soon as possible. Take a look at
 CONTRBUTING.md to find out how you can help!

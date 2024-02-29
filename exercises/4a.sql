@@ -1,0 +1,3 @@
+-- List the name of every album in the database
+-- Include the artist name
+-- (Hint: JOIN the artist and album tables)

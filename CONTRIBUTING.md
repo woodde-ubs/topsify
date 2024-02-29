@@ -2,24 +2,51 @@
 
 ## Day 1
 
-We have so many features to crank out this quarter it's hard to know where to
-begin. The app is going to start making suggested playlists based on _the
-algorithm_ - think "top 10 danciest tracks" and so on. And then we've got
-Topsify Wrapped coming up at the end of the year...
+## Day 2
 
-Take a look at `queries`. See `0-example.sql`? Here's what to do in the terminal
-to make it run:
+## Day 3
 
-```bash
-sqlite3 db/db.sqlite < queries/0-example.sql > reports/0-example.json
+There's an important feature we need to get off the ground: playlists.
+
+```mermaid
+erDiagram
+  users {
+      integer id PK "Primary Key"
+      text username "Unique"
+      text firstName
+      text lastName
+      text email "Unique"
+      text avatar
+      text password
+  }
+
+  playlists {
+      integer id PK "Primary Key"
+      integer user_id FK "Foreign Key"
+      text name
+  }
+
+  playlist_tracks {
+      integer playlist_id FK "Foreign Key"
+      text track_id FK "Foreign Key"
+  }
+
+  tracks {
+      text id PK "Primary Key"
+      text album_id FK "Foreign Key"
+      text name
+      boolean explicit
+      text preview_url
+      integer disc_number
+      integer track_number
+      real duration_ms
+  }
+
+  users ||--o{ playlists : "owns"
+  playlists ||--o{ playlist_tracks : "contains"
+  tracks ||--o{ playlist_tracks : "included_in"
 ```
 
-You can check the results of your query in `reports`.
+Write some migrations to create the `playlists` and `playlist_tracks` tables.
 
-**Bonus:**
-
-Have a look at `lib/paginate.js` too - would be amazing to get that working.
-
-Thanks!
-
-## Day 2
+Write some seed data to model users creating playlists and adding tracks.

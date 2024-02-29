@@ -1,0 +1,3 @@
+-- Create a list of all album names
+-- Include the total duration of the album
+-- (Hint: JOIN albums to tracks, GROUP by album_id, use SUM)
