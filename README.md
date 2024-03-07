@@ -12,9 +12,10 @@ to get up to speed.
 
 ## Getting started
 
-1. First up, clone this repo and run `npm install` to get all the dependencies.
+1. First up, fork and clone this repo and run `npm install` to get all the
+   dependencies.
 
-1. Next, lets set up the database by running `npm run restore`. At any time, if
+1. Next, let's set up the database by running `npm run restore`. At any time, if
    your database gets messed up, you can run this command. It will delete all
    the tables and fill it again with the initial test data.
 
