@@ -5,19 +5,21 @@ and eye-watering amounts of data.
 
 We're so glad you're here - corporate have been asking for reports, stats and
 data, but the team is stretched thin at the moment trying to get the UI right.
-We need you working on the database straight away.
+Let's get working on the database straight away.
 
 The database is in SQL. Before you tackle the backlog, you should take some time
 to get up to speed.
 
 ## Getting started
 
-1. First up, fork and clone this repo and run `npm install` to get all the
-   dependencies.
+1. First up: fork and clone this repo.
 
-1. Next, let's set up the database by running `npm run restore`. At any time, if
-   your database gets messed up, you can run this command. It will delete all
-   the tables and fill it again with the initial test data.
+1. The database is already populated, but in case you want to start from
+   scratch, this is the command you'll need:
+
+   ```bash
+   sqlite3 db/topsify.db < db/reset.sql
+   ```
 
 1. Have a look at `queries/example.sql` to see how to query the database.
 

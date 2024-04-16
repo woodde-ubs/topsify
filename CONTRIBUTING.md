@@ -2,6 +2,8 @@
 
 ## Day 1
 
+The API team are desperate to get some queries done.
+
 ## Day 2
 
 ## Day 3
