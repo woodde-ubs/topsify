@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="200px" src="logo.png" alt="Topsify logo"/>
+</p>
+
 # Topsify
 
 Welcome to Topsify! We're a huge music streaming service with a global user base
