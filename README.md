@@ -114,6 +114,10 @@ reports.
 | [Aggregate queries](https://tech-docs.corndel.com/sql/aggregate-queries.html)   | `5a.sql` and `5b.sql` |
 | [Grouped aggregates](https://tech-docs.corndel.com/sql/grouped-aggregates.html) | `6a.sql` and `6b.sql` |
 
+Also, take a look at
+[Many to many relationships](https://tech-docs.corndel.com/sql/many-to-many.html) -
+this will help you with the workshop.
+
 ### Workshop
 
 Now you know about join, we can take our reports to the next level. Head to
@@ -123,11 +127,11 @@ CONTRIBUTING.md to help!
 
 ### Deep dive
 
-| Reading                                                                                                                                                                                            | Exercises             |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| [Create](https://tech-docs.corndel.com/sql/inserting-rows.html), [update](https://tech-docs.corndel.com/sql/updating-rows.html) and [delete](https://tech-docs.corndel.com/sql/deleting-rows.html) | `7a.sql` and `7b.sql` |
-| [Creating tables](https://tech-docs.corndel.com/sql/creating-tables.html)                                                                                                                          | `8a.sql` and `8b.sql` |
-| [One-to-many](https://tech-docs.corndel.com/sql/one-to-many.html) and [many-to-many](https://tech-docs.corndel.com/sql/many-to-many.html) relationships                                            | `9a.sql` and `9b.sql` |
+| Reading                                                                   | Exercises             |
+| ------------------------------------------------------------------------- | --------------------- |
+| [Writing data](https://tech-docs.corndel.com/sql/writing-data.html)       | `7a.sql` and `7b.sql` |
+| [Writing data](https://tech-docs.corndel.com/sql/writing-data.html)       | `8a.sql` and `8b.sql` |
+| [Creating tables](https://tech-docs.corndel.com/sql/creating-tables.html) | `9a.sql` and `9b.sql` |
 
 ### Workshop
 

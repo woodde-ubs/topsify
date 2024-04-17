@@ -2,9 +2,11 @@
 
 ## Day 1
 
-The API team are desperate to get some queries done.
+TODO: Add workshop instructions
 
 ## Day 2
+
+TODO: Add workshop instructions
 
 ## Day 3
 
