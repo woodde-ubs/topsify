@@ -132,4 +132,4 @@ CONTRIBUTING.md to help!
 ### Workshop
 
 We really need the playlists feature out as soon as possible. Take a look at
-CONTRBUTING.md to find out how you can help!
+CONTRIBUTING.md to find out how you can help!
