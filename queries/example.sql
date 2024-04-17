@@ -1,8 +1,8 @@
 -- To execute the query, open a terminal and run:
--- sqlite3 db/topsify.sqlite < queries/example.sql
+-- sqlite3 db/db.sqlite < queries/example.sql
 
 -- To make a report, add an output file:
--- sqlite3 db/topsify.sqlite < queries/example.sql > reports/example.txt
+-- sqlite3 db/db.sqlite < queries/example.sql > reports/example.txt
 
 SELECT name, duration_ms
 FROM tracks
