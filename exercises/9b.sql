@@ -8,10 +8,3 @@
 
 -- Could you write the SQL to set up this junction table?
 
-CREATE TABLE track_genres (
-    track_id TEXT,
-    genre_id INTEGER,
-    PRIMARY KEY (track_id, genre_id),
-    FOREIGN KEY (track_id) REFERENCES tracks(id),
-    FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
-);
