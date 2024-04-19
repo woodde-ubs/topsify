@@ -5,9 +5,16 @@ if [ $# -eq 0 ];
   else exercises="$@";
 fi
 
-echo $exercises
+echo "Testing exercise(s) $exercises";
+
+overall_result=0
 for arg in $exercises;
 do
-  sqlite3 db/db.sqlite < db/reset.sql
-  bash -c "./tests/$arg.test.sh" | diff - "./tests/$arg.txt" &> /dev/null
+  bash -c "./tests/setup.sh" &> /dev/null;
+  bash -c "./tests/$arg.test.sh" &> /dev/null;
+  test_result=$?;
+  echo Exercise $arg $([[ $test_result -eq 0 ]] && echo "Pass ✅" || echo "Fail ❌");
+  overall_result=$(($overall_result|$test_result))
 done
+
+exit $overall_result
