@@ -27,6 +27,18 @@ to get up to speed.
 
 1. Have a look at `queries/example.sql` to see how to query the database.
 
+1. To check if your deep dive tests pass, you can run:
+   
+   ```bash
+   ./test.sh
+   ```
+
+   You can also specify the tests to run like so:
+
+   ```bash
+   ./test.sh 1a 1b 2a 2b 3a
+   ```
+
 ## Database
 
 Here's a glance at how the database is set up.
