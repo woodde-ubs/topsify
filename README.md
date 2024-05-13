@@ -11,33 +11,19 @@ We're so glad you're here - corporate have been asking for reports, stats and
 data, but the team is stretched thin at the moment trying to get the UI right.
 Let's get working on the database straight away.
 
-The database is in SQL. Before you tackle the backlog, you should take some time
-to get up to speed.
-
 ## Getting started
 
 1. First up: fork and clone this repo.
 
-1. The database is already populated, but in case you want to start from
-   scratch, this is the command you'll need:
+1. Open a terminal in the root of the project, and run the following command to
+   set up the database:
 
    ```bash
    sqlite3 db/topsify.db < db/reset.sql
    ```
 
-1. Have a look at `queries/example.sql` to see how to query the database.
-
-1. To check if your deep dive tests pass, you can run:
-   
-   ```bash
-   ./test.sh
-   ```
-
-   You can also specify the tests to run like so:
-
-   ```bash
-   ./test.sh 1a 1b 2a 2b 3a
-   ```
+1. Have a look at `queries/example.sql` to see how to query the database. Try
+   running the example query shown in this file and see the results.
 
 ## Database
 
@@ -102,6 +88,18 @@ erDiagram
 ```
 
 ## Day 1
+
+To check if your deep dive tests pass, you can run:
+
+```bash
+./test.sh
+```
+
+You can also specify the tests to run like so:
+
+```bash
+./test.sh 1a 1b 2a 2b 3a
+```
 
 ### Deep dive
 
