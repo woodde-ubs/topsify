@@ -19,7 +19,7 @@ Let's get working on the database straight away.
    set up the database:
 
    ```bash
-   sqlite3 db/db.sqlite < db/reset.sql
+   sqlite3 db/topsify.db < db/reset.sql
    ```
 
 1. Have a look at `queries/example.sql` to see how to query the database. Try
@@ -87,7 +87,7 @@ erDiagram
     tracks ||--|| features : "described by"
 ```
 
-## Day 1
+## Running tests
 
 To check if your deep dive tests pass, you can run:
 
@@ -95,11 +95,38 @@ To check if your deep dive tests pass, you can run:
 ./test.sh
 ```
 
-You can also specify the tests to run like so:
+> [!WARNING]
+>
+> Make sure you include the `./`, and that you run this from the proejct root
+> directory.
 
-```bash
-./test.sh 1a 1b 2a 2b 3a
-```
+> [!TIP]
+>
+> You can also specify the tests to run like so:
+>
+> ```bash
+> ./test.sh 1a 1b 2a 2b 3a
+> ```
+
+> [!NOTE]
+> 
+> If you can't run `./test.sh`, you might need to make it executable first.
+>
+> To do this, run
+>
+> ```bash
+> chmod +x ./test.sh
+> ```
+>
+> and try running
+>
+> ```bash
+> ./test.sh
+> ```
+>
+> again.
+
+## Day 1
 
 ### Deep dive
 
