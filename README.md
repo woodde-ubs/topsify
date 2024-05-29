@@ -19,7 +19,7 @@ Let's get working on the database straight away.
    set up the database:
 
    ```bash
-   sqlite3 db/topsify.db < db/reset.sql
+   sqlite3 db/db.sqlite < db/reset.sql
    ```
 
 1. Have a look at `queries/example.sql` to see how to query the database. Try
