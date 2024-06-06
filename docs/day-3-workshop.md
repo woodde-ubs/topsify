@@ -1,14 +1,4 @@
-# Contributing
-
-## Day 1
-
-TODO: Add workshop instructions
-
-## Day 2
-
-TODO: Add workshop instructions
-
-## Day 3
+# Day 3 Workshop
 
 There's an important feature we need to get off the ground: playlists.
 
@@ -17,8 +7,8 @@ erDiagram
   users {
       integer id PK "Primary Key"
       text username "Unique"
-      text firstName
-      text lastName
+      text first_name
+      text last_name
       text email "Unique"
       text avatar
       text password
@@ -51,6 +41,11 @@ erDiagram
   tracks ||--o{ playlist_tracks : "included_in"
 ```
 
-Write some migrations to create the `playlists` and `playlist_tracks` tables.
+## Migrations
 
-Write some seed data to model users creating playlists and adding tracks.
+Write migrations to create the `playlists` and `playlist_tracks` tables.
+
+## Seed data
+
+Write seed data to model users creating playlists and adding tracks to their
+playlists.
