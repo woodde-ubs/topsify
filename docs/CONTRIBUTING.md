@@ -10,7 +10,7 @@ This should open your browser automatically, but if not, you should be able to
 visit (http://127.0.0.1:5500/index.html)[http://127.0.0.1:5500/index.html] in
 your browser to see the website.
 
-## Database
+## Resetting the database
 
 If you mess up the database and you want to reset it to its original state, run
 
@@ -20,6 +20,12 @@ sqlite3 db/db.sqlite < db/reset.sql
 
 Be aware that any migrations and seeds you have written will need to be
 reapplied in the correct order.
+
+## The features table
+
+You can head to Spotify's
+[API documentation](https://developer.spotify.com/documentation/web-api/reference/get-audio-features)
+for an explanation of the columns in the `features` table.
 
 ## Creating reports
 
